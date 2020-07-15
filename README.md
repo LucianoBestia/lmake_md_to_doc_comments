@@ -24,9 +24,10 @@ We will just run this binary before every `cargo doc` with a script/make.
 The `lmake_md_to_doc_comments` binary must be executed in the project root folder where is the cargo.toml file.  
 It does not work in workspace folder, but every single member project must call it separately.  
 First it searches all the rs files in src, tests and examples folders.  
-If they contain the markers, than finds the md file and the named segment and include it as doc comments into the rs file.
+If they contain the markers, than finds the md file and the named segment and include it as doc comments into the rs file.  
 The markers are always in pairs: start and end. So exactly the content in between is changed.
-The markers are always comments, so they don't change the code.
+The markers are always comments, so they don't change the code.  
+It works only for files with LF line delimiter. No CR and no CRLF.  
 
 ## markers
 
