@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `main` crate."><meta name="keywords" content="rust, rustlang, rust-lang, main"><title>main - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script><noscript><link rel="stylesheet" href="../noscript.css"></noscript><link rel="shortcut icon" href="../favicon.ico"><style type="text/css">#crate-search{background-image:url("../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../main/index.html'><div class='logo-container'><img src='../rust-logo.png' alt='logo'></div></a><p class='location'>Crate main</p><div class="sidebar-elems"><a id='all-types' href='all.html'><p>See all main's items</p></a><div class="block items"><ul><li><a href="#functions">Functions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'main', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/main/main.rs.html#2-93' title='goto source code'>[src]</a></span><span class='in-band'>Crate <a class="mod" href=''>main</a></span></h1><div class='docblock'><h1 id="lmake_md_to_doc_comments" class="section-header"><a href="#lmake_md_to_doc_comments">lmake_md_to_doc_comments</a></h1>
+<p>Includes segments of md files into rs files as doc comments.<br />
+From this doc comments <code>cargo doc</code> will generated the documentation and auto-completion.<br />
+We don't want to manually copy this segments. We want them to be automatically in sync.<br />
+We will just run this binary before every <code>cargo doc</code> with a script/make.<br />
+The <code>lmake_md_to_doc_comments</code> binary must be executed in the project root folder where is the cargo.toml file.<br />
+It does not work in workspace folder, but every single member project must call it separately.<br />
+First it searches all the rs files in src, tests and examples folders.<br />
+If they contain the markers, than finds the md file and the named segment and include it as doc comments into the rs file.
+The markers are always in pairs: start and end. So exactly the content in between is changed.
+The markers are always comments, so they don't change the code.</p>
+<h2 id="markers" class="section-header"><a href="#markers">markers</a></h2>
+<p>In the rs file write these markers:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="number">1.</span> <span class="comment">// region: lmake_md_to_doc_comments include &quot;filename.md&quot; //! A  </span>
+<span class="number">2.</span> <span class="comment">// endregion: lmake_md_to_doc_comments include &quot;filename.md&quot; //! A  </span></pre></div>
+<p>In the md file put markers to mark the segment:</p>
+<pre><code class="language-markdown">1. [comment]: # (lmake_md_to_doc_comments segment start A)  
+2. [comment]: # (lmake_md_to_doc_comments segment end A)  
+</code></pre>
+<p>The marker must be exclusively in one line. No other text in the same line.<br />
+lmake_md_to_doc_comments will delete the old lines between the markers.<br />
+It will find the md file and read the content between the markers.<br />
+Before each line it will add the doc comment symbol as is defined in the marker.<br />
+Finally it will include the new lines as doc comments in the rs file.</p>
+<h2 id="tasks-in-makefiletoml-or-script" class="section-header"><a href="#tasks-in-makefiletoml-or-script">Tasks in Makefile.toml or script</a></h2>
+<p>I use <code>cargo make</code> to script the repetitive commands sequences.<br />
+<a href="https://github.com/sagiegurari/cargo-make">https://github.com/sagiegurari/cargo-make</a><br />
+I copy to doc folder, because this is the GitHub standard.<br />
+In <code>Makefile.toml</code> add a task like this:</p>
+<pre><code class="language-toml">[tasks.doc]
+description = &quot;include md to rs, create docs, copy to docs folder&quot;
+clear = true
+script = [
+    &quot;lmake_md_to_doc_comments&quot;,
+    &quot;cargo doc --no-deps --document-private-items&quot;,
+    &quot;\\rsync -avz --delete-after target/doc/*  docs/&quot;,
+]
+</code></pre>
+</div><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table><tr class='module-item'><td><a class="fn" href="fn.enable_ansi_support.html" title='main::enable_ansi_support fn'>enable_ansi_support</a></td><td class='docblock-short'></td></tr><tr class='module-item'><td><a class="fn" href="fn.main.html" title='main::main fn'>main</a></td><td class='docblock-short'><p>The program starts here. No arguments.</p>
+</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><script>window.rootPath = "../";window.currentCrate = "main";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>
