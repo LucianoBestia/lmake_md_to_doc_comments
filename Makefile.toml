@@ -143,6 +143,8 @@ script= [
     "echo $ lmake_readme",
     # copy data from cargo.toml to README.md, then include text from README.md into *.rs doc comments
     "lmake_readme",
+    "echo $ lmake_md_to_doc_comments",
+    "lmake_md_to_doc_comments",
     "echo $ cargo doc --no-deps --document-private-items",
     # create doc from doc comments
     "cargo doc --no-deps --document-private-items",
