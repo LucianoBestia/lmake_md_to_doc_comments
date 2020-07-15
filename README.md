@@ -16,6 +16,9 @@
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 
 [comment]: # (lmake_lines_of_code end)
+[![crates.io](https://meritbadge.herokuapp.com/lmake_md_to_doc_comments)](https://crates.io/crates/lmake_md_to_doc_comments) [![Documentation](https://docs.rs/lmake_md_to_doc_comments/badge.svg)](https://docs.rs/lmake_md_to_doc_comments/) [![crev reviews](
+https://web.crev.dev/rust-reviews/badge/crev_count/lmake_md_to_doc_comments.svg
+)](https://web.crev.dev/rust-reviews/crate/lmake_md_to_doc_comments/) [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/lmake_md_to_doc_comments/) [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LucianoBestia/reader_for_microxml/blob/master/LICENSE)
 
 Includes segments of md files into rs files as doc comments.  
 From this doc comments `cargo doc` will generated the documentation and auto-completion.  
