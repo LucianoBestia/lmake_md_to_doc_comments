@@ -9,9 +9,9 @@
 [comment]: # (lmake_readme cargo.toml data end)
 
 [comment]: # (lmake_lines_of_code start)
-[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-187-green.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-188-green.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-118-blue.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
-[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-20-purple.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-22-purple.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 
@@ -70,12 +70,16 @@ script = [
 
 [comment]: # (lmake_md_to_doc_comments segment end A)
 
+[comment]: # (lmake_md_to_doc_comments segment start B)
+
 ## install
 
 Install from crates.io:  
 `cargo install lmake_md_to_doc_comments`  
 Then you can use it in every rust project folder.  
 No arguments needed to execute the util.  
+
+[comment]: # (lmake_md_to_doc_comments segment end B)
 
 ## Development
 

@@ -54,6 +54,9 @@
 //!
 // endregion: lmake_md_to_doc_comments include README.md A //!
 
+// region: lmake_md_to_doc_comments include README.md B //!
+// endregion: lmake_md_to_doc_comments include README.md B //!
+
 #[allow(unused_imports)]
 use ansi_term::Colour::{Green, Red, Yellow};
 //use ansi_term::Style;
