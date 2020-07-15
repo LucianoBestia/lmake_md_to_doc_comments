@@ -3,14 +3,14 @@
 # lmake_md_to_doc_comments  
 
 [comment]: # (lmake_readme cargo.toml data start)
-***version: 0.5.4  date: 2020-07-15 authors: Luciano Bestia***  
+***version: 0.5.5  date: 2020-07-15 authors: Luciano Bestia***  
 **Includes segments of md files into rs files as doc comments.**
 
 [comment]: # (lmake_readme cargo.toml data end)
 
 [comment]: # (lmake_lines_of_code start)
 [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-188-green.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-118-blue.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-143-blue.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-22-purple.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)

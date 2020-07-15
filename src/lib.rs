@@ -1,6 +1,15 @@
 // region: lmake_md_to_doc_comments include README.md A //!
 //! # lmake_md_to_doc_comments  
 //!
+//! ***version: 0.5.4  date: 2020-07-15 authors: Luciano Bestia***  
+//! **Includes segments of md files into rs files as doc comments.**
+//!
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-188-green.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-118-blue.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-22-purple.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+//! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+//! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_md_to_doc_comments/)
+//!
 //! Includes segments of md files into rs files as doc comments.  
 //! From this doc comments `cargo doc` will generated the documentation and auto-completion.  
 //! We don't want to manually copy this segments. We want them to be automatically in sync.  

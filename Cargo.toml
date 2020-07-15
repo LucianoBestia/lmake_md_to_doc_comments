@@ -1,6 +1,6 @@
 [package]
 name = "lmake_md_to_doc_comments"
-version = "0.5.4"
+version = "0.5.5"
 authors = ["Luciano Bestia <luciano.bestia@gmail.com>"]
 edition = "2018"
 description = "Includes segments of md files into rs files as doc comments."
